@@ -169,6 +169,46 @@ public class MLog {
         printLog(LEVEL.E, tag, getStackTraceString(tr));
     }
 
+    public static void v(Object obj, String msg) {
+        if (obj != null) {
+            v(obj.getClass(), msg);
+        } else {
+            v(msg);
+        }
+    }
+
+    public static void d(Object obj, String msg) {
+        if (obj != null) {
+            v(obj.getClass(), msg);
+        } else {
+            v(msg);
+        }
+    }
+
+    public static void i(Object obj, String msg) {
+        if (obj != null) {
+            v(obj.getClass(), msg);
+        } else {
+            v(msg);
+        }
+    }
+
+    public static void w(Object obj, String msg) {
+        if (obj != null) {
+            v(obj.getClass(), msg);
+        } else {
+            v(msg);
+        }
+    }
+
+    public static void e(Object obj, String msg) {
+        if (obj != null) {
+            v(obj.getClass(), msg);
+        } else {
+            v(msg);
+        }
+    }
+
     public static String getStackTraceString(Throwable tr) {
         if (tr == null) {
             return "";
@@ -206,7 +246,11 @@ public class MLog {
         return defaultTag;
     }
 
-    public static void setIsEnable(boolean enable) {
+    public static void setTag(String tag) {
+        defaultTag = tag;
+    }
+
+    public static void setEnable(boolean enable) {
         isEnable = enable;
     }
 
