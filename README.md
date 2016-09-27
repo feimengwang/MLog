@@ -14,6 +14,11 @@ MLog.d("tag","test");//use the given tag
 MLog.d(this,"test");//use the class name as the tag name
 ```
 
+## Add the library to you project
+```
+compile 'cn.true123.mlog:mlog:0.0.1'
+```
+
 ##License
 
 ```
